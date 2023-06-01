@@ -11,13 +11,7 @@ class Calculator:
         self.var1 = tk.StringVar()
         self.var1.set("")
         self.text_area = tk.Entry(self.window, textvariable=self.var1, font=('Arial', 60), justify='right')
-        # self.text_area.bind(self.get_text)
-        # self.text_area.grid(row=0,column=0)
         self.text_area.pack(fill='both', pady=40,)
-        #
-        # self.text_area = tk.Text(self.window, height=6, font=('Arial', 16), padx=10, pady=10)
-        # self.text_area.bind("<KeyPress>")
-        # self.text_area.pack()
 
         self.btn_frame = tk.Frame(self.window, cursor='dot')
         self.btn_frame.columnconfigure(0, weight=1)
@@ -75,7 +69,6 @@ class Calculator:
 
         self.btn_add = tk.Button(self.btn_frame, text="+", font=('Arial', 18))
         self.btn_add.bind("<Button-1>", self.click)
-        # self.btn_add.bind(self.get_text)
         self.btn_add.grid(row=5, column=3, sticky=tk.W + tk.E)
 
         self.btn_sub = tk.Button(self.btn_frame, text="-", font=('Arial', 18))
@@ -109,17 +102,7 @@ class Calculator:
         self.btn_frame.pack(fill='x', side='bottom')
 
         self.window.mainloop();
-
-    # def btn_pressed(self, event):
-    #     print("btn pressed:- ", event);
-    #     self.text_area.insert('end', event)
-    #     # print("var:- ", self.var1.get()+self.var1.get())
-    #
-    # def get_text(self, event):
-    #     print("get_text:- ", self.text_area.get())
-    #     if self.btn_add :
-    #         v1 = self.text_area.get()
-    #         print("v1:-", v1)
+        
 
     def click(self, event):
         self.var1;
